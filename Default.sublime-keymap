@@ -1,0 +1,22 @@
+[
+    {
+        // Decimal
+        "keys": ["alt+enter"], "command": "procapy", "args": { "radix": "decimal" }, "context":
+        [ { "key": "panel_visible", "operator": "equal", "operand": false } ]
+    },
+    {
+        // Hex
+        "keys": ["alt+ctrl+enter"], "command": "procapy", "args": { "radix": "hex" }, "context":
+        [ { "key": "panel_visible", "operator": "equal", "operand": false } ]
+    },
+    {
+        // Binary
+        "keys": ["alt+shift+enter"], "command": "procapy", "args": { "radix": "binary" }, "context":
+        [ { "key": "panel_visible", "operator": "equal", "operand": false } ]
+    },
+    {
+        // Octal
+        "keys": ["alt+ctrl+shift+enter"], "command": "procapy", "args": { "radix": "octal" }, "context":
+        [ { "key": "panel_visible", "operator": "equal", "operand": false } ]
+    },
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "Procapy: Calculate (to Decimal)",
+        "command": "procapy", "args": { "radix": "decimal" }
+    },
+    {
+        "caption": "Procapy: Calculate (to Hex)",
+        "command": "procapy", "args": { "radix": "hex" }
+    },
+    {
+        "caption": "Procapy: Calculate (to Binary)",
+        "command": "procapy", "args": { "radix": "binary" }
+    },
+    {
+        "caption": "Procapy: Calculate (to Octal)",
+        "command": "procapy", "args": { "radix": "octal" }
+    },
+]
