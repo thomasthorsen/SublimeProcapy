@@ -14,7 +14,7 @@ The default keyboard shortcuts are:
  * SHIFT-CTRL-ALT-ENTER: Calculate octal
 
 ## Built-in functions
-In addition to the Python standard functions, math and cmath modules, Procapy adds the following functions that are useful in programming:
+In addition to the Python standard functions, math and cmath modules (the latter imported into the cmath namespace), Procapy adds the following functions that are useful in programming:
 
  * u(w,x): truncate x to an unsigned integer of width w.
  * u8(x), u16(x), u32(x), u64(x): truncate x to an unsigned integer of the indicated width.
@@ -22,6 +22,8 @@ In addition to the Python standard functions, math and cmath modules, Procapy ad
  * i8(x), i16(x), i32(x), i64(x): truncate x to a signed integer of the indicated width.
 
 These are similar to the built-in function int(x) which will truncate to an integer of unlimited width.
+
+In addition, the variable n is assigned a value matching the index of each selection. This can be used in mathematical expressions to form different results for each selection.
 
 ## Examples
 
