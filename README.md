@@ -24,3 +24,77 @@ In addition to the Python standard functions, math and cmath modules, Procapy ad
 These are similar to the built-in function int(x) which will truncate to an integer of unlimited width.
 
 ## Examples
+
+Difference between two hex numbers:
+
+ * "0x0003 - 0x0007"
+   * Decimal: "-4"
+
+Same but truncated to 32bit unsigned range which reveals the two's complement encoding of the negative number:
+
+ * "u32(0x0003 - 0x0007)"
+   * Hex: "0xfffffffc"
+
+Division and addition:
+
+ * "800 / 33 + 500 / 42"
+   * Decimal: "36.14718614718615"
+   * Hex: "0x24"
+   * Binary: "0b100100"
+
+Same but adding truncation to 8bit unsigned of intermediate results:
+
+ * c "u8(800 / 33) + u8(500 / 42)"
+   * Decimal: "35"
+
+Interpretation of a positive hex number as unsigned integer:
+
+ * "0xfffffffe"
+   * Decimal: "4294967294"
+
+Same but showing truncatated to 32bit signed integer, revealing the value when interpreted as a two's complement encoding:
+
+ * "i32(0xfffffffe)"
+   * Decimal: "-2"
+
+Comparisons operators return True/False in decimal mode and 0/1 in hex/binary/octal:
+
+ * "0x0003 - 0xffff > 50"
+   * Decimal: "False"
+   * Hex: "0x0"
+   * Binary: "0b0"
+
+Same but with truncation of intermediate result to 32bit unsigned integer:
+
+ * "u32(0x0003 - 0xffff) > 50"
+   * Decimal: "True"
+
+Mixed radix calculations:
+
+ * "0b1011 + 0x5 + 5"
+   * Decimal: "21"
+   * Hex: "0x15"
+
+Bitwise operators (AND, NOT, OR, XOR):
+
+ * "0b1011 | ~0x5 & 5 ^ 0b101"
+   * Decimal: "15"
+   * Hex: "0xf"
+   * Binary: "0b1111"
+
+Shift operators:
+
+ * "(1 << 7) >> 3"
+   * Decimal: "16"
+   * Hex: "0x10"
+   * Binary: "0b10000"
+
+Boolean operators and (in)equality:
+
+ * "45 > 5 and 6 < 7 or 5 == 3 and 4 != 4"
+   * Decimal: "True"
+
+Rounding:
+
+ * "round(4.51)"
+   * Decimal: "5"
