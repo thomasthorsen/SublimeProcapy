@@ -1,7 +1,7 @@
 import sublime
 import sublime_plugin
 from math import *
-from cmath import *
+import cmath
 import sys
 
 # Truncation to arbitrary width unsigned integer
